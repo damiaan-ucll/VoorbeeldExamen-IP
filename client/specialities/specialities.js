@@ -1,8 +1,8 @@
-Template.specialities.onCreated(function() {
+Template.specialityOverview.onCreated(function() {
 	this.form = {}
 })
 
-Template.specialities.onRendered(function() {
+Template.specialityOverview.onRendered(function() {
 	var template = this
 	this.form.nameField = this.find('.name')
 	this.form.name = function() {
@@ -12,17 +12,17 @@ Template.specialities.onRendered(function() {
 })
 
 
-Template.specialities.helpers({
+Template.specialityOverview.helpers({
 	specialities: function() {
-		return Specialities.find({country: this._id})
+		return Specialities.find()
 	}
 })
 
-Template.specialities.events({
+Template.specialityOverview.events({
 	'submit form': function(event, template) {
 		event.preventDefault();
+		console.log(template.form.name(), template.form.nameField)
 		Specialities.insert({
-			country: this._id,
 			name: template.form.name()
 		})
 	}

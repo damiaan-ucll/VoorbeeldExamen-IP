@@ -1,0 +1,27 @@
+<template name="countySpecialities">
+	<section class=grey>
+
+		<p>Specialities:</p>
+		<ul>
+			{{#each specialities}}
+				{{> countrySpeciality}}
+			{{/each}}
+		</ul>
+		<p>
+			<form class="speciality">
+				<a>Add a speciality</a>
+				<select class="country">
+					{{#each unusedSpeciality}}
+					<option value="{{_id}}">{{name}}</option>
+					{{/each}}
+				</select>
+				<button type="submit">add now</button>
+			</form>
+		</p>
+
+	</section>
+</template>
+
+<template name="countrySpeciality">
+	<li>{{name}} <button class="remove">remove</button></li>
+</template>

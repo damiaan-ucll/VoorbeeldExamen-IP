@@ -1,10 +1,9 @@
-<template name="specialities">
-	<section>
+<template name="specialityOverview">
 
-		<p>specialities:</p>
+		<h1>Specialities</h1>
 		<ul>
 			{{#each specialities}}
-				<li>{{name}}</li>
+				<li>{{> speciality}}</li>
 			{{/each}}
 		</ul>
 		<p>
@@ -15,5 +14,4 @@
 			</form>
 		</p>
 
-	</section>
 </template>

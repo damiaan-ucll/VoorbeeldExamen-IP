@@ -20,7 +20,8 @@ Template.overview.events({
 	'submit form.country': function(event, template) {
 		event.preventDefault()
 		Countries.insert({
-			name: template.form.name()
+			name: template.form.name(),
+			specialities: []
 		})
 		template.form.nameField.value = "";
 	}
