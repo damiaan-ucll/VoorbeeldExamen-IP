@@ -1,0 +1,19 @@
+<template name="specialities">
+	<section>
+
+		<p>specialities:</p>
+		<ul>
+			{{#each specialities}}
+				<li>{{name}}</li>
+			{{/each}}
+		</ul>
+		<p>
+			<form class="speciality">
+				<a>Add a speciality</a>
+				<input class="name" type="text">
+				<button type="submit">add now</button>
+			</form>
+		</p>
+
+	</section>
+</template>

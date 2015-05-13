@@ -1,0 +1,9 @@
+<template name="country">
+	<strong class="name">{{name}}</strong>
+	<button class="delete">Delete</button>
+	<button class="showSpecialities">{{showOrHide}} specialities</button>
+
+	{{#if showSpecialities}}
+		{{> specialities}}
+	{{/if}}
+</template>

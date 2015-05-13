@@ -1,0 +1,1 @@
+Specialities = new Mongo.Collection('specialities')

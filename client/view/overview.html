@@ -1,0 +1,17 @@
+<template name="overview">
+	<h1>Countries</h1>
+	<p>Double click on a country name to change its name</p>
+	<ul class="countryOverview">
+	{{#each countries}}
+		<li class="countryItem">{{> country}}</li>
+	{{else}}
+		no countries
+	{{/each}}
+	</ul>
+
+	<form class="country">
+		<h2>New Country</h2>
+		<label>Name <input type="text" class=name></label>
+		<button type="sumbit">add</button>
+	</form>
+</template>
